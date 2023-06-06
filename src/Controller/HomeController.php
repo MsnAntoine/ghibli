@@ -22,4 +22,11 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+    #[Route('/jeux', name: 'app_jeux')]
+    public function appjeux(): Response
+    {
+        return $this->render('Jeux/dino.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 }
