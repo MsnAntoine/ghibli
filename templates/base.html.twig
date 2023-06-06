@@ -25,6 +25,11 @@
             </ul>
         </nav>
         <img src="{{ asset('medias/images/t-shirt-catbus-studio-ghibli-totoro.png') }}" alt="totoro.png" id="totoroAcceuil">
+        {% if app.user %}
+            <div class="mb-3">
+                Vous êtes connecté en tant que {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+            </div>
+        {% endif %}
     </div>
     <hr id="ligneNav">
         {% block body %}{% endblock %}
