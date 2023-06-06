@@ -22,6 +22,7 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
     #[Route('/jeux', name: 'app_dino')]
     public function dino(): Response
     {
