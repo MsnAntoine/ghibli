@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="{{ asset('build/app.css') }}">
+
+{% block body %}
+
+    <div class="btn">
+            <p class="text">Le Studio Ghibli Inc.
+                est un studio d'animation japonais fondé par Hayao Miyazaki et Isao Takahata en 1985.
+                Il produit des longs-métrages et courts-métrages d'animation,
+                ainsi que, dans une moindre mesure, des téléfilms, des séries et des jeux vidéo.</p>
+            <button class="myButto" type="button" onclick="window.location.href='{{ path('app_login') }}'">Connexion</button>
+            <button  class="myButto" type="button" onclick="window.location.href='{{ path('app_register') }}'">s'inscrire</button>
+    </div>
+    <img class="imagac" src="{{ asset('medias/images/imgbin_studio-ghibli-anime-drawing-film-png.png') }}" alt="image gibli">
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
