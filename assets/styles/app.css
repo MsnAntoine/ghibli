@@ -1,6 +1,9 @@
 body{
     font-family: yomogi, serif;
 }
+.menu{
+    display: flex;
+}
 nav{
     display:flex;
     list-style-type: none;
@@ -25,4 +28,9 @@ hr{
     margin-left:50px;
     margin-right: 10px;
 
+}
+#totoroAcceuil{
+    margin-top: 50px;
+    width: 150px;
+    height: 100px;
 }
