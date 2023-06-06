@@ -38,7 +38,7 @@ hr{
 .form-contact{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);}
 
 #formLogin{
 display: flex;
@@ -123,7 +123,7 @@ display: flex;
     display:inline-block;
     cursor:pointer;
     color:#000000;
-    font-family:Arial;
+    font-family: Arial, serif;
     font-size:17px;
     padding:16px 31px;
     text-decoration:none;
