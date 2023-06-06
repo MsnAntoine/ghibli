@@ -34,6 +34,65 @@ hr{
     width: 150px;
     height: 100px;
 }
+
+#formLogin{
+display: flex;
+    flex-direction: column;
+}
+.identifiant{
+    padding: 25px;
+    border: #cccccc solid ;
+    border-radius: 15px;
+    box-shadow: #cccccc;
+    position: relative;
+}
+.password{
+    padding: 15px;
+    border: #cccccc solid ;
+    border-radius: 15px;
+    box-shadow: #cccccc;
+    align-items: center ;
+
+}
+/*.IdenMotBtn{*/
+/*    position: relative;*/
+/*    top: 160px; left: 290px;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    margin-right: 400px;*/
+/*    padding: 10px;*/
+/*}*/
+.IdenMotBtn input{
+
+}
+#formLogin {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.IdenMotBtn { grid-area: 3 / 4 / 4 / 6; }
+
+.btn.btn-lg.btn-primary{
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    background-color: #9595e8;
+    margin-left: 270px;
+    border-radius: 15px;
+}
+.imgacceuil{
+    display: flex;
+    grid-area: 4 / 2 / 7 / 7; }
+
+#titreConnexion{
+    position: relative;
+    top :150px;
+    left: 1300px;
+=======
 .myButto {
     background-color:#ffffff;
     border-radius:28px;
@@ -70,4 +129,5 @@ font-size: 3vh;
 .imagac{
     position: absolute;
     top: 1vw;
+
 }
