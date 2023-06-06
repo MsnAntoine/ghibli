@@ -1,3 +1,23 @@
-body {
-    background-color: lightgray;
+body{
+    font-family: yomogi, serif;
 }
+nav{
+    display:flex;
+    list-style-type: none;
+    margin-top: 75px;
+    margin-left: 150px;
+    margin-right:700px;
+    font-size: 25px;
+}
+nav ul {
+    justify-content: space-around;
+}
+nav ul li {
+    display:inline-block;
+    justify-content: space-around;
+}
+nav ul li a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
