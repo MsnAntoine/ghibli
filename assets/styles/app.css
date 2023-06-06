@@ -20,4 +20,9 @@ nav ul li a {
     text-decoration: none;
     list-style-type: none;
 }
+hr{
+    border: #9bee22 solid 1.5px;
+    margin-left:50px;
+    margin-right: 10px;
 
+}
