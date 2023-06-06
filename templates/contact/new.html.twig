@@ -3,9 +3,10 @@
 {% block title %}Contact{% endblock %}
 
 {% block body %}
-    <h1>Contactez-nous</h1>
-
+    <h1 id="titreContact">Contact</h1>
+    
     {{ include('contact/_form.html.twig') }}
 
-    <a href="{{ path('app_contact_index') }}">Retour à la liste</a>
+
+    <img src="{{ asset('build/images/catbus-ghibli-museum-studio-ghibli-susuwatari-wallpaper-others-8c1b4e53dea82b05ace68725222eef1f.f57da745.png') }}" id="imgContact" alt="imgContact">
 {% endblock %}

@@ -1,4 +1,43 @@
-{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Enregistré') }}</button>
-{{ form_end(form) }}
+
+<div class="form-contact">
+        <form action="" class="formContact">
+                <div class="sujet">
+                    <label>
+                        <input type="text" placeholder="Sujets : ">
+                    </label>
+                </div>
+                <br>
+                <div class="date">
+                    <label>Date : </label>
+                    <label>
+                        <input type="date">
+                    </label>
+                </div>
+                <br>
+                <div>
+                    <label>
+                        <textarea name="message" id="message" cols="45" rows="8" placeholder="Message : "></textarea>
+                    </label>
+                </div>
+                <br>
+                <div class="statut">
+                    <label>
+                        <select name="statutChoices">
+                            <option value="">--Quel est le statut de votre message ?--</option>
+                            <option value="valide">Validé</option>
+                            <option value="en cours">En cours</option>
+                            <option value="refuse">Refusé</option>
+                        </select>
+                    </label>
+                </div>
+            <br>
+            <div class="btnValCon">
+                <button class="btn" id="valideBtnContact">{{ button_label|default('Validé') }}</button>
+            </div>
+            <a href="{{ path('app_contact_index') }}">Retour à la liste</a>
+        </form>
+
+    </div>
+
+
+
