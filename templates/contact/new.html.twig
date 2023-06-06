@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+    <h1>Contactez-nous</h1>
+
+    {{ include('contact/_form.html.twig') }}
+
+    <a href="{{ path('app_contact_index') }}">Retour à la liste</a>
+{% endblock %}
