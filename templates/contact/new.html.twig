@@ -5,8 +5,13 @@
 {% block body %}
     <h1 id="titreContact">Contact</h1>
 
-    {{ include('contact/_form.html.twig') }}
+
+        <body-contact>
+            <div class="background-img-contact">
+                {{ include('contact/_form.html.twig') }}
+            </div>
+        </body-contact>
 
 
-    <img src="{{ asset('build/images/catbus-ghibli-museum-studio-ghibli-susuwatari-wallpaper-others-8c1b4e53dea82b05ace68725222eef1f.f57da745.png') }}" id="imgContact" alt="imgContact">
+
 {% endblock %}

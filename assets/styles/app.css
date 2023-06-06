@@ -39,6 +39,11 @@ hr{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    background-image: url("../../public/medias/images/ig gibli-20230606T124320Z-001/ig gibli/catbus-ghibli-museum-studio-ghibli-susuwatari-wallpaper-others-8c1b4e53dea82b05ace68725222eef1f.png");
+    background-position: left 50vh bottom 180px;
+    background-size: initial;
+    background-repeat: no-repeat;
+
 
 }
 
@@ -91,12 +96,7 @@ display: flex;
     margin-bottom: 40px;
 }
 
-#imgContact{
-    position: relative;
-    left: 52vh;
-    bottom: 50vh;
 
-}
 
 .IdenMotBtn { grid-area: 3 / 4 / 4 / 6; }
 
@@ -125,7 +125,7 @@ display: flex;
     display:inline-block;
     cursor:pointer;
     color:#000000;
-    font-family:Arial;
+    font-family: Arial;
     font-size:17px;
     padding:16px 31px;
     text-decoration:none;
@@ -160,11 +160,15 @@ font-size: 3vh;
 #message{
     border-radius: 25px;
     resize: none;
+    border:1px solid #18ab29 ;
+    padding: 15px;
 }
 
 #choiceStatut{
     border-radius: 25px;
     height: 30px;
+    border:1px solid #18ab29 ;
+
 }
 
 .back button a{
@@ -182,8 +186,36 @@ font-size: 3vh;
 }
 
 .btnContactUl button{
+    border:1px solid #18ab29 ;
     width: 135px;
     padding: 15px;
     border-radius: 25px;
 
+}
+
+.btn a{
+    text-decoration: none;
+    color: black;
+}
+
+#sujetContact{
+    border:1px solid #18ab29 ;
+    width: 350px;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+.inptDate{
+    border:1px solid #18ab29 ;
+    width: 350px;
+    padding: 8px;
+    border-radius: 25px;
+}
+
+.btnValCon{
+    margin-right: 20px;
+}
+
+.back{
+    margin-left: 20px ;
 }
