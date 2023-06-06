@@ -14,13 +14,16 @@
 
     </head>
     <body>
-    <nav>
-        <ul>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Jeux</a></li>
-            <li><a href="#">A Propos</a></li>
-        </ul>
-    </nav>
+    <div class="menu">
+        <nav>
+            <ul>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Jeux</a></li>
+                <li><a href="#">A Propos</a></li>
+            </ul>
+        </nav>
+        <img src="{{ asset('medias/images/t-shirt-catbus-studio-ghibli-totoro.png') }}" alt="totoro.png" id="totoroAcceuil">
+    </div>
     <hr id="ligneNav">
         {% block body %}{% endblock %}
     </body>
