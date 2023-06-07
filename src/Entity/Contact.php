@@ -26,6 +26,9 @@ class Contact
     #[ORM\Column(length: 50)]
     private ?string $statut = null;
 
+    #[ORM\ManyToOne(inversedBy: 'contacts')]
+    private ?User $user = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -75,6 +78,18 @@ class Contact
     public function setStatut(string $statut): self
     {
         $this->statut = $statut;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }
