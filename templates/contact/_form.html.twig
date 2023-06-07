@@ -1,45 +1,20 @@
 
-<div class="form-contact">
-        <form action="" class="formContact">
-                <div class="sujet">
-                    <label>
-                        <input id="sujetContact" type="text" placeholder="Sujets : " required>
-                    </label>
-                </div>
-                <br>
-                <div class="date">
-
-                    <label>
-                        <input class="inptDate" type="date">
-                    </label>
-                </div>
-                <br>
-                <div>
-                    <label>
-                        <textarea name="message" id="message" cols="45" rows="8" placeholder="Message : " required></textarea>
-                    </label>
-                </div>
-                <br>
-                <div class="statut">
-                    <label>
-                        <select id="choiceStatut" name="statutChoices" required>
-                            <option value="">--Quel est le statut de votre message ?--</option>
-                            <option value="valide">Validé</option>
-                            <option value="en cours">En cours</option>
-                            <option value="refuse">Refusé</option>
-                        </select>
-                    </label>
-                </div>
-            <br>
-            <div class="btnsContacts">
-                <ul class="btnContactUl">
-                    <li class="btnValCon"><button class="btn" id="valideBtnContact" type="submit">Validé</button></li>
-                    <li class="back"><button><a href="{{ path('app_contact_index') }}">Retour à la liste</a></button></li>
-                </ul>
-            </div>
-        </form>
-
+<div class="bgImg">
+    <div class="form-contact">
+        {{ form_start(form) }}
+        {{ form_widget(form.sujet) }}
+        <br>
+        {{ form_label(form.date) }}
+        {{ form_widget(form.date) }}
+        <br>
+        {{ form_widget(form.message) }}
+        <br><br>
+        {{ form_widget(form.statut) }}
+        <br><br>
+        <button type="submit" class="btn">Valider</button>
+        {{ form_end(form) }}
     </div>
+</div>
 
 
 
