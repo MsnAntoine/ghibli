@@ -1,3 +1,8 @@
+#sensio_framework_extra:
+#    router:
+#        annotations: false
+
 sensio_framework_extra:
-    router:
-        annotations: false
+    request:
+        converters: true
+        auto_convert: false
