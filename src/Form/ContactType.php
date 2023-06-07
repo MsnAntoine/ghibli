@@ -33,6 +33,7 @@ class ContactType extends AbstractType
                     'Validé'=>'valide',
                     'Refusé'=>'refuse',
                     'En Cours'=>'en cours'
+
                 ]
             ])
         ;
