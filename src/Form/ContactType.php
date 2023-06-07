@@ -19,7 +19,7 @@ class ContactType extends AbstractType
                 'attr'=>[
                     'placeholder'=>'Le sujet de votre message : '
                 ]
-                ])
+            ])
             ->add('date')
             ->add('message', TextareaType::class, [
                 'attr'=>[
