@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Contact;
 use App\Form\ContactType;
 use App\Repository\ContactRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -22,14 +23,15 @@ class ContactController extends AbstractController
     }
 
     #[Route('/new', name: 'app_contact_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, ContactRepository $contactRepository): Response
+    public function new(Request $request, ContactRepository $contactRepository, EntityManagerInterface $entityManager): Response
     {
         $contact = new Contact();
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $contactRepository->save($contact, true);
+            $entityManager->persist($contact);
+            $entityManager->flush();
 
             return $this->redirectToRoute('app_contact_index', [], Response::HTTP_SEE_OTHER);
         }
@@ -49,13 +51,13 @@ class ContactController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'app_contact_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Contact $contact, ContactRepository $contactRepository): Response
+    public function edit(Request $request, Contact $contact, ContactRepository $contactRepository, EntityManagerInterface $entityManager): Response
     {
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $contactRepository->save($contact, true);
+            $entityManager->flush();
 
             return $this->redirectToRoute('app_contact_index', [], Response::HTTP_SEE_OTHER);
         }
@@ -67,10 +69,11 @@ class ContactController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_contact_delete', methods: ['POST'])]
-    public function delete(Request $request, Contact $contact, ContactRepository $contactRepository): Response
+    public function delete(Request $request, Contact $contact, ContactRepository $contactRepository, EntityManagerInterface $entityManager): Response
     {
         if ($this->isCsrfTokenValid('delete'.$contact->getId(), $request->request->get('_token'))) {
-            $contactRepository->remove($contact, true);
+            $entityManager->remove($contact);
+            $entityManager->flush();
         }
 
         return $this->redirectToRoute('app_contact_index', [], Response::HTTP_SEE_OTHER);

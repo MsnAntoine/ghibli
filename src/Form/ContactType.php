@@ -17,9 +17,10 @@ class ContactType extends AbstractType
         $builder
             ->add('sujet', TextType::class, [
                 'attr'=>[
-                    'placeholder'=>'Le sujet de votre message : '
+                    'placeholder'=>'Le sujet de votre message : ',
+                    'id'=>'sujet'
                 ]
-                ])
+            ])
             ->add('date')
             ->add('message', TextareaType::class, [
                 'attr'=>[
@@ -28,9 +29,11 @@ class ContactType extends AbstractType
             ])
             ->add('statut', ChoiceType::class, [
                 'choices'=>[
+                    '--Quel est le statut de votre message ?--' =>'',
                     'Validé'=>'valide',
                     'Refusé'=>'refuse',
                     'En Cours'=>'en cours'
+
                 ]
             ])
         ;
