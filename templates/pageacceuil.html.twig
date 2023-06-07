@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="{{ asset('build/app.css') }}">
-
+<link rel="stylesheet" href="{{ asset('sakura/sakura.css') }}">
 {% block body %}
-
     <div class="btnac">
             <p class="text">Le Studio Ghibli Inc.
                 est un studio d'animation japonais fondé par Hayao Miyazaki et Isao Takahata en 1985.
@@ -11,6 +10,17 @@
             <button  class="myButto" type="button" onclick="window.location.href='{{ path('app_register') }}'">s'inscrire</button>
     </div>
     <img class="imagac" src="{{ asset('medias/images/imgbin_studio-ghibli-anime-drawing-film-png.png') }}" alt="image gibli">
+    <ul class="sakura">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+    </ul>
 {% endblock %}
 
 {% block title %}
