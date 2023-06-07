@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Bienvenue !{% endblock %}</title>
-
+        <link rel="stylesheet" href="{{ asset('sakura/homefooter.css') }}">
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -11,29 +11,23 @@
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
-
     </head>
-    <body>
     <div class="menu">
         <nav>
             <ul>
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">Jeux</a></li>
-                <li><a href="{{ path('app_login') }}">Login</a></li>
-
                 <li><a href="#">A Propos</a></li>
             </ul>
         </nav>
-        <img src="{{ asset('medias/images/t-shirt-catbus-studio-ghibli-totoro.png') }}" alt="totoro.png" id="totoroAcceuil">
+    </div>
+    <div class="logoconnect">
         {% if app.user %}
             <div class="mb-3">
                 Vous êtes connecté en tant que {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
             </div>
         {% endif %}
-    </div>
-    <hr id="ligneNav">
         {% block body %}
-
         {% endblock %}
-    </body>
+
 </html>
