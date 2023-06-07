@@ -3,26 +3,26 @@
         <form action="" class="formContact">
                 <div class="sujet">
                     <label>
-                        <input type="text" placeholder="Sujets : ">
+                        <input id="sujetContact" type="text" placeholder="Sujets : " required>
                     </label>
                 </div>
                 <br>
                 <div class="date">
-                    <label>Date : </label>
+
                     <label>
-                        <input type="date">
+                        <input class="inptDate" type="date">
                     </label>
                 </div>
                 <br>
                 <div>
                     <label>
-                        <textarea name="message" id="message" cols="45" rows="8" placeholder="Message : "></textarea>
+                        <textarea name="message" id="message" cols="45" rows="8" placeholder="Message : " required></textarea>
                     </label>
                 </div>
                 <br>
                 <div class="statut">
                     <label>
-                        <select name="statutChoices">
+                        <select id="choiceStatut" name="statutChoices" required>
                             <option value="">--Quel est le statut de votre message ?--</option>
                             <option value="valide">Validé</option>
                             <option value="en cours">En cours</option>
@@ -31,10 +31,20 @@
                     </label>
                 </div>
             <br>
-            <div class="btnValCon">
-                <button class="btn" id="valideBtnContact">{{ button_label|default('Validé') }}</button>
+            <div class="btnsContacts">
+                <ul class="btnContactUl">
+                    <li class="btnValCon"><button class="btn" id="valideBtnContact"><a href="{{ button_label|default('Validé') }}">Validé</a></button></li>
+                    <li class="back"><button><a href="{{ path('app_contact_index') }}">Retour à la liste</a></button></li>
+                </ul>
             </div>
-            <a href="{{ path('app_contact_index') }}">Retour à la liste</a>
+            <div >
+
+            </div>
+            <div >
+
+            </div>
+
+
         </form>
 
     </div>
