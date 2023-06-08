@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Bienvenue !{% endblock %}</title>
-        <link rel="stylesheet" href="{{ asset('sakura/homefooter.css') }}">
+        <link rel="stylesheet" href="{{ asset('sakura/bubble.css') }}">
+        <link rel="stylesheet" href="{{asset('sakura/bulle.css') }}">
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -29,6 +30,49 @@
                     Vous êtes connecté en tant que {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
                 </div>
             {% endif %}
+        </div>
+        <main class="page-content">
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">ghibli 1</h2>
+                    <p class="copy">On meurt tous un jour, petit, qu'on soit mendiant ou empereur.</p>
+                    <button class="btn">GO</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">ghibli 2</h2>
+                    <p class="copy">J'aspire toujours à une société plus juste</p>
+                    <button class="btn">GO</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">ghibli 3</h2>
+                    <p class="copy">On ne peut pas comprendre ce qui se passe dans le monde en étant manichéen, «pour» ou «contre»</p>
+                    <button class="btn">GO</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">ghibli 4</h2>
+                    <p class="copy">Un cœur c'est lourd à porter</p>
+                    <button class="btn">GO</button>
+                </div>
+            </div>
+        </main>
+        <img src="{{ asset('medias/images/bacacc.jpg') }}" alt="" class="backimg">
+        <div id="background-wrap">
+            <div class="bubble x1"></div>
+            <div class="bubble x2"></div>
+            <div class="bubble x3"></div>
+            <div class="bubble x4"></div>
+            <div class="bubble x5"></div>
+            <div class="bubble x6"></div>
+            <div class="bubble x7"></div>
+            <div class="bubble x8"></div>
+            <div class="bubble x9"></div>
+            <div class="bubble x10"></div>
         </div>
         {% block body %}
         {% endblock %}
