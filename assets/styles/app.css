@@ -34,7 +34,7 @@ hr{
 
 
 .logoconnect{
-position: relative;
+    position: relative;
     left: 35vw;
     bottom: 8vw;
     background-color:#ffffff;
@@ -58,7 +58,7 @@ position: relative;
 
 
 #formLogin{
-display: flex;
+    display: flex;
     flex-direction: column;
 }
 .identifiant{
@@ -126,8 +126,8 @@ display: flex;
     position: relative;
     top :150px;
     left: 1300px;
-  }
-  
+}
+
 .myButto {
     background-color:#ffffff;
     border-radius:28px;
@@ -159,8 +159,8 @@ display: flex;
 }
 
 .text{
-font-size: 3vh;
-font-family: 'Yomogi', cursive;
+    font-size: 3vh;
+    font-family: 'Yomogi', cursive;
 }
 .imagac{
     position: absolute;
@@ -176,7 +176,7 @@ font-family: 'Yomogi', cursive;
     top: 10vw;
 }
 .form1{
- text-align: center;
+    text-align: center;
 }
 .chat{
     width: 25vw;
@@ -189,6 +189,7 @@ font-family: 'Yomogi', cursive;
     display:inline-block;
     cursor:pointer;
     color:#000000;
+    font-family:Arial;
     font-size:17px;
     padding:16px 31px;
     text-decoration:none;
@@ -216,6 +217,14 @@ nav ul{
     gap: 2vw;
 }
 
+
+
+#message{
+    border-radius: 25px;
+    resize: none;
+    border:1px solid #18ab29 ;
+    padding: 15px;
+}
 
 #choiceStatut{
     border-radius: 25px;
@@ -273,19 +282,12 @@ nav ul{
 
 ::placeholder{
     font-family: 'Yomogi', cursive;
-    color: black;
-
 }
 
 #imgCont{
     position: relative;
-
-
+    bottom: 10vh;
     right: 35vw;
-
-    bottom: 32vh;
-    left: 22vw;
-
     width: 900px ;
     z-index: -1;
 }
@@ -297,15 +299,8 @@ nav ul{
 thead, tbody, #nC {
     position: relative;
     left: 38vw;
-
 }
 .backimg{
-
-    top: 5vh;
-}
-
-#imgKargurashi-bg{
-
     width: 100vw;
     height: 100vh;
     object-fit: cover;
@@ -315,45 +310,4 @@ thead, tbody, #nC {
     top: 0;
     bottom: 0;
     z-index: -1;
-
-}
-
-tbody tr td a {
-    text-decoration: none;
-    color: whitesmoke;
-}
-
-#nC{
-    text-decoration: none;
-    color: crimson;
-}
-
-.sujet{
-    padding: 15px;
-    width: 400px;
-    border-radius: 25px;
-    border:1px solid #18ab29 ;
-}
-
-.message{
-    border-radius: 25px;
-    width: 350px;
-    resize: none;
-    border:1px solid #18ab29 ;
-    padding: 40px;
-}
-
-.statut{
-    padding: 15px;
-    width: 430px;
-    border-radius: 25px;
-    border:1px solid #18ab29 ;
-}
-
-#back,#validate{
-    padding: 15px;
-    width: 150px;
-    border-radius: 25px;
-    border:1px solid #18ab29 ;
-
 }
