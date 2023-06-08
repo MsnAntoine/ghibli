@@ -1,0 +1,142 @@
+
+/* ------------------------ Page contact/new -------------------------------- */
+
+
+#titreContact{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.form-contact {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.formContact{
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.message{
+    border-radius: 25px;
+    resize: none;
+    border:1px solid #18ab29 ;
+    padding: 40px;
+    width: 400px;
+}
+
+::placeholder{
+    font-family: 'Yomogi', cursive;
+    color: black;
+}
+
+#back a{
+    text-decoration: none;
+    color: black;
+}
+
+#imgCont{
+    position: relative;
+    left: 0.5vh ;
+    bottom: 23vh;
+    width: 900px ;
+    z-index: -1;
+}
+
+.sujet{
+    border-radius: 25px;
+    resize: none;
+    border:1px solid #18ab29 ;
+    padding: 8px;
+    width: 400px;
+}
+
+.statut{
+    border-radius: 25px;
+    resize: none;
+    border:1px solid #18ab29 ;
+    padding: 8px;
+    width: 400px;
+}
+
+#validate, #back{
+    color: black;
+    border:1px solid #18ab29 ;
+    width: 175px;
+    padding: 12px;
+    border-radius: 25px;
+}
+
+#back a{
+    text-decoration: none;
+    color: black;
+}
+
+/* ------------------------ Page contact/index -------------------------------- */
+
+
+#imgKargurashi-bg{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#tabCont{
+    text-align: center;
+    font-size: 50px;
+}
+
+
+
+#nC{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border:1px solid #18ab29 ;
+    width: 175px;
+    padding: 12px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+#nC:hover{
+    background-color: rgba(164, 238, 118, 0.74);
+    color: rgb(24, 171, 41);
+}
+
+.tabContact{
+    padding: 8vh;
+    border-radius: 25px;
+    border:2px solid #18ab29 ;
+    background-color: rgba(249, 252, 249, 0.38);
+}
+
+.visu {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+.visu:hover{
+    color: #18ab29;
+}
+
+
+th {
+    letter-spacing: 8px;
+}
+
+tbody td {
+    text-align: center;
+}
+
+tfoot th {
+    text-align: right;
+}

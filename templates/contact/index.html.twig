@@ -3,10 +3,12 @@
 {% block title %}Contact{% endblock %}
 
 {% block body %}
-    <h1 id="tabCont">Tableau de Contact</h1>
+    <link rel="stylesheet" href="{{ asset('cssContact/contact.css') }}">
+    <fieldset class="tabContact">
+        <legend id="tabCont">Tableau de Contact</legend>
 
-    <table class="table">
-        <thead>
+        <table class="table">
+            <thead>
             <tr id="tr1Cont">
                 <th>Id</th>
                 <th>Sujet</th>
@@ -15,31 +17,29 @@
                 <th>Statut</th>
                 <th>actions</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for contact in contacts %}
-            <tr>
-                <td>{{ contact.id }}</td>
-                <td>{{ contact.sujet }}</td>
-                <td>{{ contact.date ? contact.date|date('Y-m-d') : '' }}</td>
-                <td>{{ contact.message }}</td>
-                <td>{{ contact.statut }}</td>
-                <td>
-                    <a href="{{ path('app_contact_show', {'id': contact.id}) }}">Visualiser</a>
-                    <a href="{{ path('app_contact_edit', {'id': contact.id}) }}">Modifier</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">Tableau Vide</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
+            </thead>
+            <tbody>
+            {% for contact in contacts %}
+                <tr>
+                    <td>{{ contact.id }}</td>
+                    <td>{{ contact.sujet }}</td>
+                    <td>{{ contact.date ? contact.date|date('Y-m-d') : '' }}</td>
+                    <td>{{ contact.message }}</td>
+                    <td>{{ contact.statut }}</td>
+                    <td>
+                        <a href="{{ path('app_contact_show', {'id': contact.id}) }}" class="visu">Visualiser</a> |
+                        <a href="{{ path('app_contact_edit', {'id': contact.id}) }}" class="visu">Modifier</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="6">Tableau Vide</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </fieldset>
     <a id="nC" href="{{ path('app_contact_new') }}">Nouveau Contact</a>
-    <div class="bgImgTabCon">
 
-    </div>
     <img src="{{ asset('medias/images/ig gibli-20230606T124320Z-001/karigurashi022.jpg') }}" alt="voyageChihiro" id="imgKargurashi-bg">}
 {% endblock %}
