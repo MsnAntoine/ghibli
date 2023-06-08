@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="{{ asset('cssContact/contact.css') }}">
     <fieldset class="tabContact">
         <legend id="tabCont">Tableau de Contact</legend>
-
         <table class="table">
             <thead>
             <tr id="tr1Cont">
@@ -20,7 +19,7 @@
             </thead>
             <tbody>
             {% for contact in contacts %}
-                <tr>
+                <tr id="tr2Cont">
                     <td>{{ contact.id }}</td>
                     <td>{{ contact.sujet }}</td>
                     <td>{{ contact.date ? contact.date|date('Y-m-d') : '' }}</td>

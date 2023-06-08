@@ -96,6 +96,7 @@
 
 
 #nC{
+    margin-right: 76vw;
     text-align: center;
     text-decoration: none;
     color: black;
@@ -128,6 +129,19 @@
     color: #18ab29;
 }
 
+#tr1Cont{
+    position: relative;
+    right: 38vw;
+    bottom: 8vh;
+}
+
+
+td{
+    position: relative;
+    right: 38vw;
+    bottom: 6vh;
+
+}
 
 th {
     letter-spacing: 8px;
