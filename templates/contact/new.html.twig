@@ -3,13 +3,13 @@
 {% block title %}Contact{% endblock %}
 
 {% block body %}
+    <link rel="stylesheet" href="{{ asset('cssContact/contact.css') }}">
     <h1 id="titreContact">Contact</h1>
 
 
     {{ include('contact/_form.html.twig') }}
 
 
-    <img class="chat" src="{{ asset('medias/images/ig gibli-20230606T124320Z-001/ig gibli/catbus-ghibli-museum-studio-ghibli-susuwatari-wallpaper-others-8c1b4e53dea82b05ace68725222eef1f.png') }}" alt="contactImgGibli" id="imgCont">
-
     <img src="{{ asset('medias/images/ig gibli-20230606T124320Z-001/ig gibli/catbus-ghibli-museum-studio-ghibli-susuwatari-wallpaper-others-8c1b4e53dea82b05ace68725222eef1f.png') }}" alt="contactImgGibli" id="imgCont">
+
 {% endblock %}

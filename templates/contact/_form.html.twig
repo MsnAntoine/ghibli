@@ -1,18 +1,7 @@
-
+<link rel="stylesheet" href="../../public/cssContact/contact.css">
 <div class="bgImg">
     <div class="form-contact">
         {{ form_start(form) }}
-            {{ form_widget(form.sujet) }}
-            <br>
-            {{ form_label(form.date) }}
-            {{ form_widget(form.date) }}
-            <br>
-            {{ form_widget(form.message) }}
-            <br><br>
-            {{ form_widget(form.statut) }}
-            <br><br>
-            <button type="submit" class="btn">Valider</button>
-            <button id="back"><a href="{{ path('app_contact_index') }}">Retour</a></button>
             <div>
                 {{ form_widget(form.sujet, {'attr':{'class':'sujet'}}) }}
             </div>
@@ -31,7 +20,7 @@
             </div>
             <br>
             <button id="validate" type="submit" class="btn">Valider</button>
-            <button id="back" ><a href="{{ path('app_contact_index') }}">Retour</a></button>
+            <button id="back"  class="btn" ><a href="{{ path('app_contact_index') }}">Retour</a></button>
         {{ form_end(form) }}
     </div>
 </div>
