@@ -243,9 +243,6 @@ nav ul{
     display: inline-block;
 }
 
-#sujetContact{
-    border-radius: 25px;
-}
 
 .btnContactUl button{
     border:1px solid #18ab29 ;
@@ -267,7 +264,7 @@ nav ul{
     border-radius: 25px;
 }
 
-.inptDate{
+#inptDate{
     border:1px solid #18ab29 ;
     width: 350px;
     padding: 8px;
@@ -278,6 +275,39 @@ nav ul{
     margin-right: 20px;
 }
 
-.back{
-    margin-left: 20px ;
+#back a{
+    text-decoration: none;
+    color: black;
+}
+
+::placeholder{
+    font-family: 'Yomogi', cursive;
+}
+
+#imgCont{
+    position: relative;
+    bottom: 10vh;
+    right: 35vw;
+    width: 900px ;
+    z-index: -1;
+}
+
+#tabCont{
+    text-align: center;
+}
+
+thead, tbody, #nC {
+    position: relative;
+    left: 38vw;
+}
+.backimg{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
 }
