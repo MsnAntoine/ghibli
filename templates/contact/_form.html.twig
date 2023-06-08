@@ -2,17 +2,25 @@
 <div class="bgImg">
     <div class="form-contact">
         {{ form_start(form) }}
-            {{ form_widget(form.sujet) }}
+            <div>
+                {{ form_widget(form.sujet, {'attr':{'class':'sujet'}}) }}
+            </div>
+            <div>
+                {{ form_label(form.date) }}
+            </div>
+            <div>
+                {{ form_widget(form.date) }}
+            </div>
             <br>
-            {{ form_label(form.date) }}
-            {{ form_widget(form.date) }}
+            <div>
+                {{ form_widget(form.message, {'attr':{'class':'message'}}) }}
+            </div>
+            <div>
+                {{ form_widget(form.statut, {'attr':{'class':'statut'}}) }}
+            </div>
             <br>
-            {{ form_widget(form.message) }}
-            <br><br>
-            {{ form_widget(form.statut) }}
-            <br><br>
-            <button type="submit" class="btn">Valider</button>
-            <button id="back"><a href="{{ path('app_contact_index') }}">Retour</a></button>
+            <button id="validate" type="submit" class="btn">Valider</button>
+            <button id="back" ><a href="{{ path('app_contact_index') }}">Retour</a></button>
         {{ form_end(form) }}
     </div>
 </div>

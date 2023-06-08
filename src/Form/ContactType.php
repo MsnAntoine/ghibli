@@ -18,8 +18,7 @@ class ContactType extends AbstractType
         $builder
             ->add('sujet', TextType::class, [
                 'attr'=>[
-                    'placeholder'=>'Le sujet de votre message : ',
-                    'id'=>'sujetContact'
+                    'placeholder'=>'Le sujet de votre message : '
                 ]
             ])
             ->add('date', \Symfony\Component\Form\Extension\Core\Type\DateType::class,[
