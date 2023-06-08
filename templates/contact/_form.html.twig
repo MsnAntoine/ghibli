@@ -13,6 +13,25 @@
             <br><br>
             <button type="submit" class="btn">Valider</button>
             <button id="back"><a href="{{ path('app_contact_index') }}">Retour</a></button>
+            <div>
+                {{ form_widget(form.sujet, {'attr':{'class':'sujet'}}) }}
+            </div>
+            <div>
+                {{ form_label(form.date) }}
+            </div>
+            <div>
+                {{ form_widget(form.date) }}
+            </div>
+            <br>
+            <div>
+                {{ form_widget(form.message, {'attr':{'class':'message'}}) }}
+            </div>
+            <div>
+                {{ form_widget(form.statut, {'attr':{'class':'statut'}}) }}
+            </div>
+            <br>
+            <button id="validate" type="submit" class="btn">Valider</button>
+            <button id="back" ><a href="{{ path('app_contact_index') }}">Retour</a></button>
         {{ form_end(form) }}
     </div>
 </div>

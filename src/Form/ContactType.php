@@ -18,6 +18,7 @@ class ContactType extends AbstractType
         $builder
             ->add('sujet', TextType::class, [
                 'attr'=>[
+
                     'placeholder'=>'Le sujet de votre message : ',
                     'id'=>'sujetContact'
                 ]
