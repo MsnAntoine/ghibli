@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Contact;
+use Doctrine\DBAL\Types\DateType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -18,13 +19,18 @@ class ContactType extends AbstractType
             ->add('sujet', TextType::class, [
                 'attr'=>[
                     'placeholder'=>'Le sujet de votre message : ',
-                    'id'=>'sujet'
+                    'id'=>'sujetContact'
                 ]
             ])
-            ->add('date')
+            ->add('date', \Symfony\Component\Form\Extension\Core\Type\DateType::class,[
+                'attr'=>[
+                    'id'=>'inptDate'
+                ]
+            ])
             ->add('message', TextareaType::class, [
                 'attr'=>[
-                    'placeholder'=>'Votre message : '
+                    'placeholder'=>'Votre message : ',
+                    'id'=>'message',
                 ]
             ])
             ->add('statut', ChoiceType::class, [
@@ -32,7 +38,9 @@ class ContactType extends AbstractType
                     '--Quel est le statut de votre message ?--' =>'',
                     'Validé'=>'valide',
                     'Refusé'=>'refuse',
-                    'En Cours'=>'en cours'
+                    'En Cours'=>'en cours',
+
+                    'id'=>'statutContact'
 
                 ]
             ])

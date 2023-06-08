@@ -12,22 +12,27 @@
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <div class="menu">
-        <nav>
-            <ul>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Jeux</a></li>
-                <li><a href="#">A Propos</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="logoconnect">
-        {% if app.user %}
-            <div class="mb-3">
-                Vous êtes connecté en tant que {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
-            </div>
-        {% endif %}
+    <body>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="/auth">Menu</a></li>
+                    <li><a href="#">Jeux</a></li>
+                    <li><a href="#">A Propos</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="logoconnect">
+            {% if app.user %}
+                <div class="mb-3">
+                    Vous êtes connecté en tant que {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
+                </div>
+            {% endif %}
+        </div>
         {% block body %}
         {% endblock %}
+    </body>
+
 
 </html>
