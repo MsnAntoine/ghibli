@@ -51,10 +51,10 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
-//            ->add('capcha', Recaptcha3Type::class,[
-//                'constraints'=> new Recaptcha3(),
-//                'action_name'=>'user'
-//            ])
+            ->add('capcha', Recaptcha3Type::class,[
+                'constraints'=> new Recaptcha3(),
+                'action_name'=>'user'
+            ])
         ;
     }
 
