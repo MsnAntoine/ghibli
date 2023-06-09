@@ -33,4 +33,11 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+    #[Route('/rock', name: 'app_rock')]
+    public function rock(): Response
+    {
+        return $this->render('rock/rock.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 }
