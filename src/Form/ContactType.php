@@ -23,11 +23,7 @@ class ContactType extends AbstractType
                     'id'=>'sujetContact'
                 ]
             ])
-            ->add('date', \Symfony\Component\Form\Extension\Core\Type\DateType::class,[
-                'attr'=>[
-                    'id'=>'inptDate'
-                ]
-            ])
+            ->add('date', \Symfony\Component\Form\Extension\Core\Type\DateType::class)
             ->add('message', TextareaType::class, [
                 'attr'=>[
                     'placeholder'=>'Votre message : ',
@@ -36,12 +32,10 @@ class ContactType extends AbstractType
             ])
             ->add('statut', ChoiceType::class, [
                 'choices'=>[
-                    '--Quel est le statut de votre message ?--' =>'',
+                    '~~ Quel est le statut de votre message ? ~~' =>'',
                     'Validé'=>'valide',
                     'Refusé'=>'refuse',
-                    'En Cours'=>'en cours',
-
-                    'id'=>'statutContact'
+                    'En Cours'=>'en cours'
 
                 ]
             ])
