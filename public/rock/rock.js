@@ -32,8 +32,7 @@ const handleClick = (e) => {
 }
 
 const generateComputerChoice = () => {
-    const randomChoice = choices[Math.floor(Math.random() * choices.length)];
-    computerChoice = randomChoice;
+    computerChoice = choices[Math.floor(Math.random() * choices.length)];
     computerChoiceDisplay.innerHTML = 'Computer choice: ' + computerChoice;
 }
 
