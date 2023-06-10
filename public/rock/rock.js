@@ -65,10 +65,24 @@ const getResult = () => {
             break;
     }
 }
-
+console.log(score)
 const incrementScore = () => {
     score++;
     scoreDisplay.innerHTML = 'Score: ' + score;
+    // Envoyer le score au serveur via une requête
+    fetch('http://localhost:8000/update-score', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ score: score })
+    })
+        .then(response => {
+            // Gérer la réponse du serveur si nécessaire
+        })
+        .catch(error => {
+            // Gérer les erreurs de requête si nécessaire
+        });
 }
 
 const resetScore = () => {
