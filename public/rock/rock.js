@@ -24,7 +24,7 @@ gameGrid.append(
 
 const handleClick = (e) => {
     userChoice = e.target.id;
-    userChoiceDisplay.innerHTML = 'User choice: ' + userChoice;
+    userChoiceDisplay.innerHTML = 'Votre choix: ' + userChoice;
     generateComputerChoice();
     getResult();
     tries++;
@@ -33,7 +33,7 @@ const handleClick = (e) => {
 
 const generateComputerChoice = () => {
     computerChoice = choices[Math.floor(Math.random() * choices.length)];
-    computerChoiceDisplay.innerHTML = 'Computer choice: ' + computerChoice;
+    computerChoiceDisplay.innerHTML = 'Ordinateur: ' + computerChoice;
 }
 
 for (let i = 0; i < choices.length; i++) {
@@ -49,19 +49,19 @@ const getResult = () => {
         case 'scissorspaper':
         case 'rockscissors':
         case 'paperrock':
-            resultDisplay.innerHTML = 'YOU WIN!';
+            resultDisplay.innerHTML = 'Vous avez gagné!';
             incrementScore();
             successes++;
             break;
         case 'paperscissors':
         case 'scissorsrock':
         case 'rockpaper':
-            resultDisplay.innerHTML = 'YOU LOSE!';
+            resultDisplay.innerHTML = 'Perdu!';
             break;
         case 'paperpaper':
         case 'scissorsscissors':
         case 'rockrock':
-            resultDisplay.innerHTML = "IT'S A DRAW!";
+            resultDisplay.innerHTML = "Egalité !!";
             break;
     }
 }
@@ -95,8 +95,8 @@ const getScore = () => {
 }
 
 const updateStats = () => {
-    triesDisplay.innerHTML = 'Tries: ' + tries;
-    successDisplay.innerHTML = 'Successes: ' + successes;
+    triesDisplay.innerHTML = 'Essais ' + tries;
+    successDisplay.innerHTML = 'Victoire ' + successes;
 }
 
 resetScore(); // Réinitialiser le score au démarrage
