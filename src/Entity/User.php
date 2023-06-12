@@ -53,9 +53,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(nullable: true)]
     private ?int $score = null;
 
-    #[ORM\Column(nullable: true)]
-    private ?string $capcha = null;
-
     public function __construct()
     {
         $this->contacts = new ArrayCollection();
@@ -233,15 +230,4 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getCapcha(): ?string
-    {
-        return $this->capcha;
-    }
-
-    public function setCapcha(?string $capcha): self
-    {
-        $this->capcha = $capcha;
-
-        return $this;
-    }
 }
