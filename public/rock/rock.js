@@ -69,7 +69,7 @@ console.log(score)
 const incrementScore = () => {
     score++;
     scoreDisplay.innerHTML = 'Score: ' + score;
-    // Envoyer le score au serveur via une requête
+    // Envoyer le score au serveur via une requête fetch
     fetch('http://localhost:8000/update-score', {
         method: 'POST',
         headers: {
