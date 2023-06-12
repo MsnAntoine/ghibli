@@ -1,7 +1,9 @@
 
 
 {% block body %}
-    <link rel="stylesheet" href={{asset('sakura/galerie.css')}}>
+
+    <img class="logoghiblig" src="{{ asset('medias/images/Logo_Ghibli.svg.png') }}" alt="">
+    <link rel="stylesheet" href="{{ asset('sakura/galerie.css') }}">
         <div id="container"></div>
     <script src={{ asset('sakura/galerie.js') }}></script>
 {% endblock %}

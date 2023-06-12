@@ -49,5 +49,35 @@ class HomeController extends AbstractController
            'controller_name' => 'HomeController',
         ]);
     }
- 
+
+    #[Route('/ghibli1', name: 'app_ghibli1')]
+    public function ghibli1(): Response
+    {
+        return $this->render('home/ghibli1.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+    #[Route('/ghibli2', name: 'app_ghibli2')]
+    public function ghibli2(): Response
+    {
+        return $this->render('home/ghibli2.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+    #[Route('/ghibli3', name: 'app_ghibli3')]
+    public function ghibli3(): Response
+    {
+        return $this->render('home/ghibli3.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+    #[Route('/ghibli4', name: 'app_ghibli4')]
+    public function ghibli4(): Response
+    {
+        return $this->render('home/ghibli4.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+
+
 }
