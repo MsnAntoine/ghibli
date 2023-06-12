@@ -115,25 +115,25 @@ function shuffle(){
     })
     if (score < 45) {
         scoretext.classList.toggle("damn")
-        scoretext.innerHTML = "Flawless"
+        scoretext.innerHTML = "Impeccable"
         flips.innerHTML ="Flips: "+score;
         scoreSec.innerHTML = "Second: " + sec+"s";
     }
     if (score >= 45 && score < 65) {
         scoretext.classList.toggle("great")
-        scoretext.innerHTML = "Great Game"
+        scoretext.innerHTML = "Exellent"
         flips.innerHTML = "Flips: " + score;
         scoreSec.innerHTML = "Second: "+sec+"s";
     }
     if (score >= 65 && score < 80) {
         scoretext.classList.toggle("mid")
-        scoretext.innerHTML = "Not Bad"
+        scoretext.innerHTML = "Moyen"
         flips.innerHTML = "Flips: " + score;
         scoreSec.innerHTML = "Second: " + sec+"s";
     }
     if (score >= 80) {
         scoretext.classList.toggle("bad")
-        scoretext.innerHTML = "Bad Game :("
+        scoretext.innerHTML = "Game over :("
         flips.innerHTML = "Flips: " + score;
         scoreSec.innerHTML = "Second: " + sec+"s";
     }
