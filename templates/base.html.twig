@@ -5,6 +5,7 @@
         <title>{% block title %}Bienvenue !{% endblock %}</title>
         <link rel="stylesheet" href="{{ asset('sakura/bubble.css') }}">
         <link rel="stylesheet" href="{{asset('sakura/bulle.css') }}">
+        <link rel="stylesheet" href="{{ asset('cssLecteurMusic/music.css') }}">
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -63,7 +64,10 @@
                 </div>
             </div>
         </main>
-        <img src="{{ asset('medias/images/bacacc.jpg') }}" alt="" class="backimg">
+            <div class="playlist">
+                <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX7GTqMQDhOum?autoplay=true" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <img src="{{ asset('medias/images/bacacc.jpg') }}" alt="" class="backimg">
         <div id="background-wrap">
             <div class="bubble x1"></div>
             <div class="bubble x2"></div>

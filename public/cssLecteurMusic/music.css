@@ -1,0 +1,13 @@
+.playlist {
+    width: 300px;
+    height: 100px;
+    position: relative;
+    bottom: 38vw;
+    right: 40vw;
+}
+
+.playlist iframe {
+    border: none;
+    width: 100%; /* Adapter à la largeur de son conteneur */
+    height: 100%; /* Adapter à la hauteur de son conteneur */
+}
