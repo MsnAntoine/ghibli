@@ -18,6 +18,11 @@
     margin-top: 10vw;
 }
 body{
-    background: rgb(79,230,157);
-    background: linear-gradient(90deg, rgba(79,230,157,1) 15%, rgba(255,255,255,1) 100%);
+    background: rgb(15, 114, 114);
+    background: linear-gradient(90deg, rgb(4, 122, 119) 15%, rgba(255,255,255,1) 100%);
+}
+.logoghiblig{
+    width: 30vw;
+    position: relative;
+    left: 35vw;
 }
