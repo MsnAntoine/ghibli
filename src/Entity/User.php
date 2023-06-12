@@ -50,10 +50,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'user', targetEntity: Contact::class)]
     private Collection $contacts;
 
+    #[ORM\Column(nullable: true)]
+    private ?int $score = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?string $capcha = null;
+
     public function __construct()
     {
         $this->contacts = new ArrayCollection();
     }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -210,6 +217,30 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
                 $contact->setUser(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getScore(): ?int
+    {
+        return $this->score;
+    }
+
+    public function setScore(?int $score): self
+    {
+        $this->score = $score;
+
+        return $this;
+    }
+
+    public function getCapcha(): ?string
+    {
+        return $this->capcha;
+    }
+
+    public function setCapcha(?string $capcha): self
+    {
+        $this->capcha = $capcha;
 
         return $this;
     }

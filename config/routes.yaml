@@ -1,5 +1,8 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
+App\Controller\:
+    resource: '../src/Controller/'
     type: attribute
+
+update_score:
+    path: '/update-score'
+    controller: 'App\Controller\ScoreController::updateScore'
+    methods: [POST]

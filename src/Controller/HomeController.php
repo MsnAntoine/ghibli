@@ -33,13 +33,23 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
-    #[Route('/galerie', name: 'app_galerie')]
-    public function galerie(): Response
+  
+  #[Route('/rock', name: 'app_rock')]
+    public function rock(): Response
     {
-        return $this->render('galerie.html.twig', [
+        return $this->render('rock/rock.html.twig', [
             'controller_name' => 'HomeController',
         ]);
     }
+  
+     #[Route('/galerie', name: 'app_galerie')]
+    public function galerie(): Response
+    {
+        return $this->render('galerie.html.twig', [
+           'controller_name' => 'HomeController',
+        ]);
+    }
+
     #[Route('/ghibli1', name: 'app_ghibli1')]
     public function ghibli1(): Response
     {
@@ -68,4 +78,6 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
+
 }

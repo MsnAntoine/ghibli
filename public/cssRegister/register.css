@@ -1,0 +1,90 @@
+#titreInscr {
+    text-align: center;
+}
+
+.formRegistration {
+    text-align: center;
+}
+
+.username,
+.nom,
+.prenom,
+.telephone,
+.ville,
+.mail,
+.mdp, .mdpII{
+    border-radius: 25px;
+    resize: none;
+    border: 1px solid #18ab29;
+    padding: 15px;
+    width: 400px;
+}
+
+#valInscr,
+#backRe {
+    border: 1px solid #18ab29;
+    color: black;
+    width: 100px;
+    border-radius: 25px;
+}
+
+body {
+    background: linear-gradient(#66e2f8, #ffffff);
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+}
+
+#ashitakaGhibli{
+    position: relative;
+    bottom: 31vw;
+    left: 18vw;
+    width: 230px;
+    z-index: -1;
+}
+
+#chatGhibli{
+    position: relative;
+    bottom: 32vw;
+    left: 68vw;
+    width: 250px;
+    z-index: -1;
+}
+
+#sorciereGhibli{
+    position: relative;
+    bottom: 42vw;
+    left: 28vw;
+    z-index: -1;
+}
+
+#totoroGhibli{
+    position: relative;
+    bottom: 48vw;
+    right: 62vw;
+    z-index: -1;
+}
+
+.tab1{
+   position: relative;
+   left: 19vw;
+    top: 10vh;
+    width: 500px;
+}
+
+.tab2{
+   position: relative;
+    left: 43vw;
+    bottom: 18vh;
+    width: 500px;
+
+}
+
+#agreeTerms{
+    position: relative;
+    bottom: 10vh;
+}
+
+.btns{
+    position: relative;
+    bottom: 10vh;
+}
