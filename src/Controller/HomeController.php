@@ -78,6 +78,11 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
-
-
+    #[Route('/carte', name: 'app_carte')]
+    public function carte(): Response
+    {
+        return $this->render('home/carte.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 }
