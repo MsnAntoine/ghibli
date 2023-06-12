@@ -1,20 +1,52 @@
+{% extends 'base.html.twig' %}
 
-
-{% block title %}Register{% endblock %}
+{% block title %}Inscription{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
+    <link rel="stylesheet" href="{{ asset('cssRegister/register.css') }}">
 
-    {{ form_start(registrationForm) }}
+    <h1 id="titreInscr">Inscription</h1>
 
-        {{ form_label(registrationForm.username) }}
-        {{ form_widget(registrationForm.username) }}
-        {{ form_label(registrationForm.password) }}
-        {{ form_widget(registrationForm.password) }}
-        {{ form_label(registrationForm.agreeTerms) }}
-        {{ form_widget(registrationForm.agreeTerms) }}
+    <div class="formRegistration">
+        {{ form_start(registrationForm) }}
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+        <div id="username">
+            {{ form_widget(registrationForm.username,{'attr':{'class':'username'}}) }}
+        </div>
+        <br>
+        <div id="nom">
+            {{ form_widget(registrationForm.nom,{'attr':{'class':'nom'}}) }}
+        </div>
+        <br>
+        <div id="prenom">
+            {{ form_widget(registrationForm.prenom,{'attr':{'class':'prenom'}}) }}
+        </div>
+        <br>
+        <div id="telephone">
+            {{ form_widget(registrationForm.telephone,{'attr':{'class':'telephone'}}) }}
+        </div>
+        <br>
+        <div id="ville">
+            {{ form_widget(registrationForm.ville,{'attr':{'class':'ville'}}) }}
+        </div>
+        <br>
+        <div id="mail">
+            {{ form_widget(registrationForm.mail,{'attr':{'class':'mail'}}) }}
+        </div>
+        <br>
+        <div id="mdp">
+            {{ form_widget(registrationForm.password,{'attr':{'class':'mdp'}}) }}
+        </div>
+        <div id="agreeTerms">
+            {{ form_row(registrationForm.agreeTerms,{'attr':{'class':'agreeTerms'}}) }}
+        </div>
+        <button id="valInscr" type="submit" class="btn">Valider</button>
+        <button id="backRe" class="btn"><a href="/">Retour</a></button>
+        {{ form_end(registrationForm) }}
+        <img src="{{ asset('medias/images/ig gibli-20230606T124320Z-001/ig gibli/Ashitaka.png') }}" alt="ashitakaGhibli" id="ashitakaGhibli">
+        <img src="{{ asset('medias/images/ig gibli-20230606T124320Z-001/ig gibli/chatCoteDroit.png') }}" alt="chatGhibli" id="chatGhibli">
+        <img src="{{ asset('medias/images/ig gibli-20230606T124320Z-001/ig gibli/sorciere.png') }}" alt="sorciereGhibli" id="sorciereGhibli">
+        <img src="{{ asset('medias/images/ig gibli-20230606T124320Z-001/ig gibli/totoroBrancheGauche.png') }}" alt="totoroGhibli" id="totoroGhibli">
 
+    </div>
 {% endblock %}
