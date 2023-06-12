@@ -3,13 +3,12 @@
 namespace App\Form;
 
 use App\Entity\User;
-use Doctrine\DBAL\Types\TextType;
 use Karser\Recaptcha3Bundle\Form\Recaptcha3Type;
 use Karser\Recaptcha3Bundle\Validator\Constraints\Recaptcha3;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
-use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\Email;
@@ -17,6 +16,7 @@ use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Regex;
+
 
 class RegistrationFormType extends AbstractType
 {
@@ -110,25 +110,37 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('password', PasswordType::class, [
-                // instead of being set onto the object directly,
-                // this is read and encoded in the controller
-                'mapped' => false,
-                'attr' => [
-                    'autocomplete' => 'new-password',
-                    'placeholder'=>'Mot de passe :'
-                    ],
-                'constraints' => [
+            ->add('password', RepeatedType::class, [
+                'type' => PasswordType::class,
+                'invalid_message' => 'Les champs de mot de passe doivent correspondre.',
+                'options' => ['attr' => ['class' => 'password-field']],
+                'required' => true,
+                'first_options'  => [
+                    'label' => false,
+                    'attr' => [
+                        'placeholder' => 'Mot de passe :'
+                    ]
+                ],
+                'second_options' => [
+                    'label' => false,
+                    'attr' => [
+                        'placeholder' => 'Répéter le mot de passe :'
+                    ]
+                ],
+                'constraints'=>[
                     new NotBlank([
-                        'message' => 'Please enter a password',
+                        'message'=>'Veuillez insérer un mot de passe',
                     ]),
                     new Length([
                         'min' => 6,
-                        'minMessage' => 'Your password should be at least {{ limit }} characters',
-                        // max length allowed by Symfony for security reasons
+                        'minMessage' => 'Votre mot de passe doit comporter au moins {{ limit }} caractères',
+                        // longueur maximale autorisée par Symfony pour des raisons de sécurité
                         'max' => 4096,
                     ]),
                 ],
+                'attr'=>[
+                    'autocomplete'=>'new-password',
+                ]
             ])
 //            ->add('capcha', Recaptcha3Type::class,[
 //                'constraints'=> new Recaptcha3(),
