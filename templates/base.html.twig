@@ -18,10 +18,10 @@
             <nav>
                 <ul>
                     <li><a href="/auth">Menu</a></li>
-                    <li><a href="{{ path('app_rock') }}">Jeux</a></li>
+                    <li><a href="/rock">Jeux</a></li>
                     <li><a href="#">A Propos</a></li>
                     <li><a href="/contact">Contact</a></li>
-                    <li></li>
+                    <li><a href="{{ path('app_galerie') }}">Film ghibli</a></li>
                 </ul>
             </nav>
         </div>
@@ -36,30 +36,30 @@
         <main class="page-content">
             <div class="card">
                 <div class="content">
-                    <h2 class="title">ghibli 1</h2>
+                    <h2 class="title">Princesse monomoke</h2>
                     <p class="copy">On meurt tous un jour, petit, qu'on soit mendiant ou empereur.</p>
-                    <button class="btn">GO</button>
+                    <a class="btn" href="{{ path('app_ghibli1') }}">Go</a>
                 </div>
             </div>
             <div class="card">
                 <div class="content">
-                    <h2 class="title">ghibli 2</h2>
-                    <p class="copy">J'aspire toujours à une société plus juste</p>
-                    <button class="btn">GO</button>
+                    <h2 class="title">Le voyage de chiro</h2>
+                    <p class="copy">On n'oublie jamais les gens qu'on a rencontré, on a juste du mal à s'en souvenir.</p>
+                    <a class="btn" href="{{ path('app_ghibli2') }}">Go</a>
                 </div>
             </div>
             <div class="card">
                 <div class="content">
-                    <h2 class="title">ghibli 3</h2>
-                    <p class="copy">On ne peut pas comprendre ce qui se passe dans le monde en étant manichéen, «pour» ou «contre»</p>
-                    <button class="btn">GO</button>
+                    <h2 class="title">Ponyo</h2>
+                    <p class="copy">Moi, Ponyo je l'aimerais pour toujours. La Ponyo poisson, la Ponyo mi-poisson et mi-humaine.</p>
+                    <a class="btn" href="{{ path('app_ghibli3') }}">Go</a>
                 </div>
             </div>
             <div class="card">
                 <div class="content">
-                    <h2 class="title">ghibli 4</h2>
+                    <h2 class="title">Le chateaux ambulant</h2>
                     <p class="copy">Un cœur c'est lourd à porter</p>
-                    <button class="btn">GO</button>
+                    <a class="btn" href="{{ path('app_ghibli4') }}">Go</a>
                 </div>
             </div>
         </main>

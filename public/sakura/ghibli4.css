@@ -1,0 +1,45 @@
+
+body{
+
+}
+.bacghibli{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.textghibli1{
+    width: 30vw;
+    font-family: 'Yomogi', cursive;
+    color: #25004b;
+    font-size: 1vw;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: solid #ffffff;
+    margin-left: 10vw;
+    box-shadow: -1px 17px 36px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 17px 36px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 17px 36px -1px rgba(0,0,0,0.75);
+}
+.realghibli1{
+    font-size: 1vw;
+    color: #25004b;
+    width: 10vw;
+    font-family: 'Yomogi', cursive;
+    position: absolute;
+    left: 70vw;
+    bottom:10vw;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.14);
+    border: solid #ffffff;
+    text-align: center;
+    box-shadow: -1px 17px 36px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 17px 36px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 17px 36px -1px rgba(0,0,0,0.75);
+
+}

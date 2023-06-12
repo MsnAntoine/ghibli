@@ -19,10 +19,8 @@ class ScoreController extends AbstractController
     {
         $this->entityManager = $entityManager;
     }
-
-    /**
-     * @Route("/update-score", name="update_score", methods={"POST"})
-     */
+    
+    #[Route(path: '/update-score', name: 'update_score', methods: ['POST'])]
     public function updateScore(Request $request): Response
     {
 

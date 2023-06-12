@@ -1,5 +1,8 @@
 #titreInscr {
+    margin-top: 20px;
     text-align: center;
+    font-family: 'Yomogi', cursive;
+    position: relative;
 }
 
 .formRegistration {
@@ -24,7 +27,8 @@
 #backRe {
     border: 1px solid #18ab29;
     color: black;
-    width: 100px;
+    width: 150px;
+    padding: 10px;
     border-radius: 25px;
 }
 
@@ -36,7 +40,7 @@ body {
 
 #ashitakaGhibli{
     position: relative;
-    bottom: 31vw;
+    bottom: 19vw;
     left: 18vw;
     width: 230px;
     z-index: -1;
@@ -44,7 +48,7 @@ body {
 
 #chatGhibli{
     position: relative;
-    bottom: 32vw;
+    bottom: 19vw;
     left: 68vw;
     width: 250px;
     z-index: -1;
@@ -52,39 +56,45 @@ body {
 
 #sorciereGhibli{
     position: relative;
-    bottom: 42vw;
-    left: 28vw;
+    bottom: 34vw;
+    left: 37vw;
     z-index: -1;
 }
 
 #totoroGhibli{
     position: relative;
-    bottom: 48vw;
-    right: 62vw;
+    bottom: 38vw;
+    right: 61vw;
     z-index: -1;
 }
 
 .tab1{
    position: relative;
-   left: 19vw;
-    top: 10vh;
-    width: 500px;
+   left: 25vw;
+    top: 30vh;
+   width: 500px;
 }
 
 .tab2{
    position: relative;
-    left: 43vw;
-    bottom: 18vh;
+    top: 4vh;
+    left: 48vw;
     width: 500px;
 
 }
 
-#agreeTerms{
-    position: relative;
-    bottom: 10vh;
-}
-
 .btns{
     position: relative;
-    bottom: 10vh;
+    top: 15vh;
+    left: 1vh;
+}
+
+#agreeTerms{
+    position: relative;
+    top: 12vh;
+}
+
+#backRe a{
+    text-decoration: none;
+    color: black;
 }
