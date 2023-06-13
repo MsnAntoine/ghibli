@@ -28,6 +28,7 @@
         "symfony/security-bundle": "6.3.*",
         "symfony/security-csrf": "6.3.*",
         "symfony/twig-bundle": "6.3.*",
+        "symfony/ux-turbo": "^2.9",
         "symfony/validator": "6.3.*",
         "symfony/webpack-encore-bundle": "^2.0",
         "symfony/yaml": "6.3.*",
