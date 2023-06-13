@@ -1,0 +1,42 @@
+
+
+{% block body %}
+    <link rel="stylesheet" href="{{ asset('/sakura/accjeux.css') }}">
+
+    <div class="card-wrap">
+        <div class="card-header one">
+            <i class="fas fa-code"></i>
+        </div>
+        <div class="card-content">
+            <h1 class="card-title">Totorocard</h1>
+            <p class="card-text">Le but est de retrouver les paires en ne retournant que deux cartes à la fois. </p>
+            <a class="card-btn one" href="{{ path('app_carte') }}">c'est parti</a>
+        </div>
+    </div>
+    <div class="card-wrap">
+        <div class="card-header two">
+            <i class="fab fa-css3-alt"></i>
+        </div>
+        <div class="card-content">
+            <h1 class="card-title">flappy</h1>
+            <p class="card-text">L'objectif est de diriger totoro, qui se déplace , pour éviter les obstacles.</p>
+            <button class="card-btn two">c'est parti</button>
+        </div>
+    </div>
+    <div class="card-wrap">
+        <div class="card-header three">
+            <i class="fab fa-html5"></i>
+        </div>
+        <div class="card-content">
+            <h1 class="card-title">chifoumi</h1>
+            <p class="card-text">Une fois le clic le joueur révèlent leur main  en même temps. et paf un resultat </p>
+            <button class="card-btn three">c'est parti</button>
+        </div>
+    </div>
+    <script src="{{ asset('/sakura/accjeux.js') }}"></script>
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
