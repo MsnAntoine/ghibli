@@ -1,0 +1,19 @@
+
+{% block body %}
+
+        <title>Flappy Totoro</title>
+        <link rel="stylesheet" href="{{ asset('flappyTotoro/totoro.css') }}">
+        <script src="{{ asset('flappyTotoro/totoro.js') }}" defer></script>
+
+    <div class="background"></div>
+    <img src="{{ asset('medias/flappyImg/Bird.png') }}" alt="bird-img" class="bird" id="bird-1">
+    <div class="message">
+        Enter To Start Game <p><span style="color: red;">&uarr;</span> ArrowUp to Control</p>
+    </div>
+    <div class="score">
+        <span class="score_title"></span>
+        <span class="score_val"></span>
+    </div>
+
+
+{% endblock %}
