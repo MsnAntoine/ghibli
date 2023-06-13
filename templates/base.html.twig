@@ -34,6 +34,7 @@
             {% endif %}
         </div>
         {% block body %}
+            <div id="musicPlayer"></div>
         <main class="page-content">
             <div class="card">
                 <div class="content">
@@ -79,9 +80,67 @@
         </div>
 
         {% endblock %}
-        <div class="playlist">
-            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX7GTqMQDhOum?autoplay=true" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        </div>
+        {# je recupere l'api de YT#}
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <script>
+            // Récupération de l'ID de la playlist
+            const playlistId = 'PL8RksmSaOE0ihiwRqMAFbCSJlm2kSUAV7';
+
+            // Chargement de l'API YouTube
+            function loadYouTubeAPI() {
+                const tag = document.createElement('script');
+                tag.src = 'https://www.youtube.com/iframe_api';
+                const firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            }
+
+            // Initialisation du lecteur YouTube
+            let player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('musicPlayer', {
+                    height: '100',
+                    width: '100',
+                    playerVars: {
+                        listType: 'playlist',
+                        list: playlistId,
+                        autoplay: 1,
+                        shuffle: 1
+                    },
+                    events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+                // Récupérer l'état du lecteur et la position de lecture depuis le stockage local
+                const storedState = localStorage.getItem('playerState');
+                const storedTime = localStorage.getItem('currentTime');
+
+                if (storedState && storedTime) {
+                    player.seekTo(parseFloat(storedTime)); // Réglez la position de lecture
+                    player.playVideo(); // Reprenez la lecture
+                } else {
+                    player.playVideo(); // Lancez la lecture normalement
+                }
+            }
+
+            // Lorsque le lecteur est prêt
+            function onPlayerReady(event) {
+                event.target.playVideo();
+            }
+
+            // Lorsque l'état de lecture change
+            function onPlayerStateChange(event) {
+                const state = event.data;
+                const currentTime = player.getCurrentTime();
+
+                // Stocker l'état du lecteur et la position de lecture dans le stockage local
+                localStorage.setItem('playerState', state);
+                localStorage.setItem('currentTime', currentTime);
+            }
+
+            // Chargement de l'API YouTube et initialisation du lecteur
+            loadYouTubeAPI();
+        </script>
     </body>
 
 
