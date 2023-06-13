@@ -1,0 +1,87 @@
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+body {
+  background-color: #FEDCC8;
+}
+
+.parallax {
+  perspective: 100px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.layer img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.cover {
+  background: #020243;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 2000px;
+  z-index: 2;
+}
+
+.layer .img1 {transform: translateZ(-250px) scale(3.6);}
+.layer .img2 {transform: translateZ(-200px) scale(3.1);}
+.layer .img3 {transform: translateZ(-150px) scale(2.6);}
+.layer .img4 {transform: translateZ(-100px) scale(2.1);}
+.layer .img5 {transform: translateZ(-50px) scale(1.5); }
+.layer .img6 {transform: translateZ(0);}
+
+
+/* .layer .img1 {transform: translateZ(-250px) scale(3.6);}
+.layer .img2 {transform: translateZ(-200px) scale(3.1);}
+.layer .img3 {transform: translateZ(-150px) scale(2.6);}
+.layer .img4 {transform: translateZ(-100px) scale(2.1);}
+.layer .img5 {transform: translateZ(-50px) scale(1.5); }
+.layer .img6 {transform: translateZ(0);} */
+
+p{
+  color: white;
+  font-family: 'Yomogi', cursive;
+  font-size: 1vw;
+  width: 30vw;
+  height: 2vw;
+  text-align: center;
+  margin-left: 34vw;
+}
+.myButto {
+  background-color:#ffffff;
+  border-radius:28px;
+  border:1px solid #18ab29;
+  display:inline-block;
+  cursor:pointer;
+  color:#000000;
+  font-family: Arial, serif;
+  font-size:17px;
+  padding:16px 31px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #2f6627;
+  position: relative;
+  top: 25vw;
+  left: 46vw;
+}
+.myButto:hover {
+  background-color:#ddfccd;
+}
