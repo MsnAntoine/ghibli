@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Bienvenue !{% endblock %}</title>
-        <link rel="stylesheet" href="{{ asset('sakura/bubble.css') }}">
-        <link rel="stylesheet" href="{{asset('sakura/bulle.css') }}">
-        <link rel="stylesheet" href="{{ asset('cssLecteurMusic/music.css') }}">
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
-
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Bienvenue !{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('sakura/bubble.css') }}">
+    <link rel="stylesheet" href="{{asset('sakura/bulle.css') }}">
+    <link rel="stylesheet" href="{{ asset('cssLecteurMusic/music.css') }}">
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
@@ -33,56 +29,114 @@
                 </div>
             {% endif %}
         </div>
-        {% block body %}
-        <main class="page-content">
-            <div class="card">
-                <div class="content">
-                    <h2 class="title">Princesse monomoke</h2>
-                    <p class="copy">On meurt tous un jour, petit, qu'on soit mendiant ou empereur.</p>
-                    <a class="btn" href="{{ path('app_ghibli1') }}">Go</a>
-                </div>
+    {% endif %}
+</div>
+{% block body %}
+    <div id="musicPlayer"></div>
+    <main class="page-content">
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Princesse Mononoke</h2>
+                <p class="copy">On meurt tous un jour, petit, qu'on soit mendiant ou empereur.</p>
+                <a class="btn" href="{{ path('app_ghibli1') }}">Go</a>
             </div>
-            <div class="card">
-                <div class="content">
-                    <h2 class="title">Le voyage de chiro</h2>
-                    <p class="copy">On n'oublie jamais les gens qu'on a rencontré, on a juste du mal à s'en souvenir.</p>
-                    <a class="btn" href="{{ path('app_ghibli2') }}">Go</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="content">
-                    <h2 class="title">Ponyo</h2>
-                    <p class="copy">Moi, Ponyo je l'aimerais pour toujours. La Ponyo poisson, la Ponyo mi-poisson et mi-humaine.</p>
-                    <a class="btn" href="{{ path('app_ghibli3') }}">Go</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="content">
-                    <h2 class="title">Le chateaux ambulant</h2>
-                    <p class="copy">Un cœur c'est lourd à porter</p>
-                    <a class="btn" href="{{ path('app_ghibli4') }}">Go</a>
-                </div>
-            </div>
-        </main>
-            <img src="{{ asset('medias/images/bacacc.jpg') }}" alt="" class="backimg">
-        <div id="background-wrap">
-            <div class="bubble x1"></div>
-            <div class="bubble x2"></div>
-            <div class="bubble x3"></div>
-            <div class="bubble x4"></div>
-            <div class="bubble x5"></div>
-            <div class="bubble x6"></div>
-            <div class="bubble x7"></div>
-            <div class="bubble x8"></div>
-            <div class="bubble x9"></div>
-            <div class="bubble x10"></div>
         </div>
-
-        {% endblock %}
-        <div class="playlist">
-            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX7GTqMQDhOum?autoplay=true" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Le Voyage de Chihiro</h2>
+                <p class="copy">On n'oublie jamais les gens qu'on a rencontrés, on a juste du mal à s'en souvenir.</p>
+                <a class="btn" href="{{ path('app_ghibli2') }}">Go</a>
+            </div>
         </div>
-    </body>
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Ponyo</h2>
+                <p class="copy">Moi, Ponyo je l'aimerais pour toujours. La Ponyo poisson, la Ponyo mi-poisson et mi-humaine.</p>
+                <a class="btn" href="{{ path('app_ghibli3') }}">Go</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Le Château ambulant</h2>
+                <p class="copy">Un cœur c'est lourd à porter</p>
+                <a class="btn" href="{{ path('app_ghibli4') }}">Go</a>
+            </div>
+        </div>
+    </main>
+    <img src="{{ asset('medias/images/bacacc.jpg') }}" alt="" class="backimg">
+    <div id="background-wrap">
+        <div class="bubble x1"></div>
+        <div class="bubble x2"></div>
+        <div class="bubble x3"></div>
+        <div class="bubble x4"></div>
+        <div class="bubble x5"></div>
+        <div class="bubble x6"></div>
+        <div class="bubble x7"></div>
+        <div class="bubble x8"></div>
+        <div class="bubble x9"></div>
+        <div class="bubble x10"></div>
+    </div>
+{% endblock %}
 
+    {# je recupere l'api de YT#}
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+    // Récupération de l'ID de la playlist
+    const playlistId = 'PL8RksmSaOE0ihiwRqMAFbCSJlm2kSUAV7';
 
+    // Chargement de l'API YouTube
+    function loadYouTubeAPI() {
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+
+    // Initialisation du lecteur YouTube
+    let player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('musicPlayer', {
+            height: '100',
+            width: '100',
+            playerVars: {
+                listType: 'playlist',
+                list: playlistId,
+                autoplay: 1 // 0 pour désactiver l'autoplay
+            },
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+        // Récupérer l'état du lecteur et la position de lecture depuis le stockage local
+        const storedState = localStorage.getItem('playerState');
+        const storedTime = localStorage.getItem('currentTime');
+
+        if (storedState && storedTime) {
+            player.seekTo(parseFloat(storedTime)); // Réglez la position de lecture
+            player.playVideo(); // Reprenez la lecture
+        } else {
+            player.playVideo(); // Lancez la lecture normalement
+        }
+    }
+
+    // Lorsque le lecteur est prêt
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+
+    // Lorsque l'état de lecture change
+    function onPlayerStateChange(event) {
+        const state = event.data;
+        const currentTime = player.getCurrentTime();
+
+        // Stocker l'état du lecteur et la position de lecture dans le stockage local
+        localStorage.setItem('playerState', state);
+        localStorage.setItem('currentTime', currentTime);
+    }
+
+    // Chargement de l'API YouTube et initialisation du lecteur
+    loadYouTubeAPI();
+</script>
+</body>
 </html>
