@@ -1,7 +1,8 @@
 #musicPlayer{
-    border-radius: 50px;
+    border-radius: 25px;
     position: fixed;
-    left: 90vw;
+    left: 80vw;
     top: 85vh;
-    opacity: 0.5;
+    opacity: 0.45;
+
 }
