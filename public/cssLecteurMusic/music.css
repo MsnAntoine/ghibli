@@ -1,13 +1,8 @@
-.playlist {
-    width: 300px;
-    height: 100px;
-    position: relative;
-    bottom: 38vw;
-    right: 40vw;
-}
-
-.playlist iframe {
-    border: none;
-    width: 100%; /* Adapter à la largeur de son conteneur */
-    height: 100%; /* Adapter à la hauteur de son conteneur */
+#musicPlayer{
+    position: fixed;
+    top: 85vh;
+    left: 185vh;
+    border-radius: 25px;
+    opacity: 0.5; /* Ajustez la valeur d'opacité selon vos besoins */
+    background-color: transparent;
 }
