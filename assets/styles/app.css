@@ -289,3 +289,7 @@ thead, tbody, #nC {
     bottom: 0;
     z-index: -1;
 }
+.btn-primary-reset{
+    border: solid 1px black;
+    border-radius: 15px;
+}

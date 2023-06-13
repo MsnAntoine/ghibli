@@ -1,9 +1,10 @@
 
 
 {% block body %}
-
+    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
     <img class="logoghiblig" src="{{ asset('medias/images/Logo_Ghibli.svg.png') }}" alt="">
     <link rel="stylesheet" href="{{ asset('sakura/galerie.css') }}">
+    <a href="{{ path('app_home') }}"class="myButto" id="menugalerie">Menu</a>
         <div id="container"></div>
     <script src={{ asset('sakura/galerie.js') }}></script>
 {% endblock %}

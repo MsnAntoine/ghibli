@@ -5,6 +5,7 @@
         <title>{% block title %}Bienvenue !{% endblock %}</title>
         <link rel="stylesheet" href="{{ asset('sakura/bubble.css') }}">
         <link rel="stylesheet" href="{{asset('sakura/bulle.css') }}">
+        <link rel="stylesheet" href="{{ asset('cssLecteurMusic/music.css') }}">
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -18,7 +19,7 @@
             <nav>
                 <ul>
                     <li><a  class="myButto" href="/auth">Menu</a></li>
-                    <li><a   class="myButto" href="/rock">Jeux</a></li>
+                    <li><a   class="myButto" href="{{ path('app_carte') }}">Jeux</a></li>
                     <li><a class="myButto" href="#">A Propos</a></li>
                     <li><a  class="myButto" href="/contact">Contact</a></li>
                     <li><a class="myButto" href="{{ path('app_galerie') }}">Film ghibli</a></li>
@@ -63,7 +64,7 @@
                 </div>
             </div>
         </main>
-        <img src="{{ asset('medias/images/bacacc.jpg') }}" alt="" class="backimg">
+            <img src="{{ asset('medias/images/bacacc.jpg') }}" alt="" class="backimg">
         <div id="background-wrap">
             <div class="bubble x1"></div>
             <div class="bubble x2"></div>
@@ -78,6 +79,9 @@
         </div>
 
         {% endblock %}
+        <div class="playlist">
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX7GTqMQDhOum?autoplay=true" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
     </body>
 
 
