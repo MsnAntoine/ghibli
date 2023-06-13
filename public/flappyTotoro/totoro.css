@@ -15,11 +15,12 @@
 }
 .bird {
     height: 90px;
-    width: 100px;
+    width: 80px;
     position: fixed;
     top: 40vh;
     left: 30vw;
     z-index: 100;
+    border-radius: 25px;
 }
 .pipe_sprite {
     position: fixed;
@@ -39,12 +40,14 @@
     font-size: 4em;
     transform: translate(-50%, -50%);
     text-align: center;
+    font-family: 'Yomogi', cursive;
 }
 .messageStyle{
-    background: white;
+    background: rgba(255, 255, 255, 0.38);
     padding: 30px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 5%;
+    border-radius:25px;
+    font-family: 'Yomogi', cursive;
 }
 .score {
     position: fixed;
@@ -80,4 +83,8 @@
     .pipe_sprite{
         width: 14vw;
     }
+}
+
+p{
+    font-family: 'Yomogi', cursive;
 }
