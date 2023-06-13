@@ -85,4 +85,11 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+    #[Route('/apropos', name: 'app_apropos')]
+    public function apropos(): Response
+    {
+        return $this->render('home/apropos.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 }
