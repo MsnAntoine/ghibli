@@ -19,7 +19,7 @@
             <nav>
                 <ul>
                     <li><a  class="myButto" href="/auth">Menu</a></li>
-                    <li><a   class="myButto" href="/rock">Jeux</a></li>
+                    <li><a   class="myButto" href="{{ path('app_carte') }}">Jeux</a></li>
                     <li><a class="myButto" href="#">A Propos</a></li>
                     <li><a  class="myButto" href="/contact">Contact</a></li>
                     <li><a class="myButto" href="{{ path('app_galerie') }}">Film ghibli</a></li>
@@ -77,6 +77,7 @@
             <div class="bubble x9"></div>
             <div class="bubble x10"></div>
         </div>
+
         {% endblock %}
         <div class="playlist">
             <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX7GTqMQDhOum?autoplay=true" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>

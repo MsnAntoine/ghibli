@@ -5,22 +5,20 @@
 }
 
 body{
-    background-color: white;
     opacity: 1;
-    background-size: 40px 40px;
     font-family: 'Poppins', sans-serif;
+    background-image: url("https://cutewallpaper.org/27/black-and-white-spirited-away-wallpaper/130-spirited-away-wallpapers.png");
 }
 
 
 .sec {
-    background: #d6ffed;
-    box-shadow: 0 0 750px rgb(189, 245, 193);
+    margin-top: 70px;
 }
 
 .ht{
     font-size: 16px;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
     width: 33.3%;
 }
 
@@ -37,7 +35,7 @@ i{
     font-family: 'Yomogi', cursive;
     transition: .3s ease;
     box-shadow: 0 0 10px #00000030;
-    border: 1px solid #bdf5c1;
+    border: 1px solid #6560cc;
     border-radius: 50px;
     overflow: hidden;
     transition: .4s ease;
@@ -48,7 +46,7 @@ i{
 }
 
 .nav{
-    background: #d6ffed;
+    background: #d4fdeb;
     color: black;
     font-family: 'Yomogi', cursive;
 }
@@ -85,6 +83,7 @@ i{
 }
 
 .sushi{
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,7 +96,8 @@ i{
 
 .cards{
     position: relative;
-    width: 90px;
+    top: 5vw;
+    width: 130px;
     height: 133px;
     margin: 8px;
     cursor: pointer;
@@ -114,7 +114,7 @@ i{
     width: 100%;
     transform: rotate(30deg);
     height: 200%;
-    background: #fff;
+    background: #ffffff;
     transition: .3s ease;
 }
 .cards:hover{
@@ -239,4 +239,24 @@ i{
 .bad {
     background: linear-gradient(to right, rgb(255, 255, 255), rgb(189, 245, 193));
     color: #fff;
+}
+.myButto {
+    background-color:#ffffff;
+    border-radius:28px;
+    border:1px solid #18ab29;
+    display:inline-block;
+    cursor:pointer;
+    color:#000000;
+    font-family: Arial, serif;
+    font-size:17px;
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+}
+.myButto:hover {
+    background-color:#ddfccd;
+}
+.myButto:active {
+    position:relative;
+    top:1px;
 }
