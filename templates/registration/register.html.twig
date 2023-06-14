@@ -4,6 +4,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="stylesheet" href="{{ asset('cssRegister/register.css') }}">
 
+
     <h1 id="titreInscr">Inscription</h1>
 
     <div class="formRegistration">
@@ -44,7 +45,9 @@
         </div>
 {#        {{ form_widget(registrationForm.capcha) }}#}
         <div id="agreeTerms">
-            {{ form_row(registrationForm.agreeTerms,{'attr':{'class':'agreeTerms'}}) }}
+            {{ form_label(registrationForm.agreeTerms, "J'accepte les ") }}
+            <a href="{{ path('app_cgu') }}" class="cgu">C.G.U</a>
+            {{ form_widget(registrationForm.agreeTerms,{'attr':{'class':'agreeTerms'}}) }}
         </div>
         <div class="btns">
             <button id="valInscr" type="submit" class="btn">Valider</button>

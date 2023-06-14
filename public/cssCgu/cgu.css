@@ -1,0 +1,63 @@
+body {
+    background: url('../medias/cguImg/howl033.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 2px black, 2px 2px 2px black;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    font-weight: bold;
+}
+
+p {
+    color: black;
+    font-weight: bolder;
+}
+
+.tabCgu {
+    position: relative;
+    left: 25vw;
+    text-align: center;
+    background-color: rgba(245, 245, 245, 0.37);
+    border: red solid 3px;
+    border-radius: 25px;
+    width: 100vh;
+    font-family: 'Yomogi', cursive;
+}
+
+/* Media Query pour les appareils de type ordinateur */
+@media (min-width: 1024px) {
+    /* Ajoutez ici vos styles spécifiques pour les ordinateurs */
+    .tabCgu {
+        left: 20vw;
+    }
+}
+
+/* Media Query pour les appareils de type tablette */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Ajoutez ici vos styles spécifiques pour les tablettes */
+    .tabCgu {
+        left: 10vw;
+        width: 60vh;
+    }
+}
+
+/* Media Query pour les appareils de type téléphone portable */
+@media (max-width: 767px) {
+    /* Ajoutez ici vos styles spécifiques pour les téléphones portables */
+    .tabCgu {
+        left: 4.5vw;
+        width: 45vh;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+}

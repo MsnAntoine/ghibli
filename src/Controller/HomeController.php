@@ -108,4 +108,11 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+    #[Route('/cgu', name: 'app_cgu')]
+    public function cgu(): Response
+    {
+        return $this->render('cgu/cgu.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 }
