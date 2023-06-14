@@ -1,6 +1,6 @@
 // Définition des variables
 let move_speed = 2; // Vitesse de déplacement des tuyaux
-let gravity = 0.080; // Gravité de l'oiseau
+let gravity = 0.070; // Gravité de l'oiseau
 let bird = document.querySelector('.bird');
 let img = document.getElementById('bird-1');
 let sound_point = new Audio('effetSonoreFlappy/point.mp3');
@@ -39,7 +39,7 @@ document.addEventListener('keydown', (e) => {
         play(); // Lancer le jeu
     } else if (e.code === 'Space' && game_state === 'Play') {
         e.preventDefault();
-        bird_dy = -5; // Ajuster la vitesse du saut ici
+        bird_dy = -4.78; // Ajuster la vitesse du saut ici
         img.src =  asset('medias/flappyImg/totoro1.png') ; // Chemin de l'image à partir de l'asset()
     }
 });
