@@ -92,6 +92,12 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
+    #[Route('/accjeux', name: 'app_accjeux')]
+    public function accjeux(): Response
+    {
+        return $this->render('home/accjeux.html.twig', [
+
     #[Route('/flappyTotoro', name: 'app_flappyTotoro')]
     public function flappyTotoro(): Response
     {

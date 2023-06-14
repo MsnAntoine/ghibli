@@ -133,7 +133,7 @@ function shuffle(){
     }
     if (score >= 80) {
         scoretext.classList.toggle("bad")
-        scoretext.innerHTML = "Game over :("
+        scoretext.innerHTML = "tu es une grosse merde :("
         flips.innerHTML = "Flips: " + score;
         scoreSec.innerHTML = "Second: " + sec+"s";
     }
