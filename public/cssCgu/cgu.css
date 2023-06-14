@@ -1,0 +1,32 @@
+body {
+    background: url('../medias/cguImg/howl033.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Yomogi', cursive;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 50px;
+    color: red;
+    text-align: center;
+}
+
+h2{
+    color: white;
+    font-weight: bold;
+}
+
+p{
+    color: black;
+    font-weight: bolder;
+}
+
+.tabCgu{
+    position: relative;
+    left: 25vw;
+    text-align: center;
+    background-color: rgba(245, 245, 245, 0.37);
+    border: red solid 3px;
+    border-radius: 25px;
+    width: 100vh;
+}

@@ -3,6 +3,6 @@ App\Controller\:
     type: attribute
 
 update_score:
-    path: '/update-score'
+    path: '/update_score'
     controller: 'App\Controller\ScoreController::updateScore'
     methods: [POST]
