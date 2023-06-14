@@ -97,6 +97,9 @@ class HomeController extends AbstractController
     public function accjeux(): Response
     {
         return $this->render('home/accjeux.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 
     #[Route('/flappyTotoro', name: 'app_flappyTotoro')]
     public function flappyTotoro(): Response
