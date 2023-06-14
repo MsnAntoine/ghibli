@@ -1,6 +1,6 @@
 // Définition des variables
-let move_speed = 2; // Vitesse de déplacement des tuyaux
-let gravity = 0.080; // Gravité de l'oiseau
+let move_speed = 2.25; // Vitesse de déplacement des tuyaux
+let gravity = 0.075; // Gravité de l'oiseau
 let bird = document.querySelector('.bird');
 let img = document.getElementById('bird-1');
 let sound_point = new Audio('effetSonoreFlappy/point.mp3');
@@ -20,7 +20,7 @@ let game_state = 'Start';
 img.style.display = 'none';
 message.classList.add('messageStyle');
 
-let bird_dy = 0; // Nouvelle variable pour la vitesse de chute de l'oiseau
+let bird_dy = -5; // Nouvelle variable pour la vitesse de chute de l'oiseau
 
 // Écouteur d'événement pour les touches du clavier
 document.addEventListener('keydown', (e) => {
@@ -39,7 +39,7 @@ document.addEventListener('keydown', (e) => {
         play(); // Lancer le jeu
     } else if (e.code === 'Space' && game_state === 'Play') {
         e.preventDefault();
-        bird_dy = -5; // Ajuster la vitesse du saut ici
+        bird_dy = -4.78; // Ajuster la vitesse du saut ici
         img.src =  asset('medias/flappyImg/totoro1.png') ; // Chemin de l'image à partir de l'asset()
     }
 });
@@ -111,13 +111,13 @@ function play() {
     requestAnimationFrame(apply_gravity); // Appeler la fonction pour appliquer la gravité au lancement du jeu
 
     let pipe_seperation = 0;
-    let pipe_gap = 35;
+    let pipe_gap = 40;
 
     // Fonction de création des tuyaux
     function create_pipe() {
         if (game_state !== 'Play') return;
 
-        if (pipe_seperation > 350) {
+        if (pipe_seperation > 345) {
             pipe_seperation = 0;
 
             let pipe_posi = Math.floor(Math.random() * 43) + 8; // Position verticale aléatoire pour les tuyaux
