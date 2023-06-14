@@ -70,18 +70,20 @@ const incrementScore = () => {
     score++;
     scoreDisplay.innerHTML = 'Score: ' + score;
     // Envoyer le score au serveur via une requête fetch
-    fetch('http://localhost:8000/update-score', {
+    fetch('/update_score', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
+        //prend en compte l'objet et le renvoi en chaine de caractere
         body: JSON.stringify({ score: score })
     })
-        .then(response => {
-            // Gérer la réponse du serveur si nécessaire
-        })
-        .catch(error => {
-            // Gérer les erreurs de requête si nécessaire
+        .then(r => {
+            return r.json()
+        }
+        )
+        .catch(e => {
+           console.error('une erreur est survenue', e)
         });
 }
 

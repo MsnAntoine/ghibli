@@ -20,7 +20,7 @@ class ScoreController extends AbstractController
         $this->entityManager = $entityManager;
     }
     
-    #[Route(path: '/update-score', name: 'update_score', methods: ['POST'])]
+    #[Route(path: '/update_score', name: 'update_score', methods: ['POST'])]
     public function updateScore(Request $request): Response
     {
 
@@ -34,9 +34,7 @@ class ScoreController extends AbstractController
                     if (isset($data['score'])) {
                         $score = $data['score'];
 
-
-
-
+                            //envoi le score en bdd
                         if ($user) {
                             $user->setScore($score);
                             $this->entityManager->flush();
@@ -48,8 +46,6 @@ class ScoreController extends AbstractController
                     } else {
                         throw new \Exception('Invalid data: "score" key not found');
                     }
-
-
 
                 }catch (\Exception $e) {
                     return new JsonResponse(['error' => $e->getMessage()], Response::HTTP_BAD_REQUEST);
