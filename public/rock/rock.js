@@ -58,7 +58,7 @@ const getResult = () => {
         case 'pierrepapier':
             resultDisplay.innerHTML = 'Perdu!';
             break;
-        case 'paperpaper':
+        case 'papierpapier':
         case 'ciseauxciseaux':
         case 'pierrepierre':
             resultDisplay.innerHTML = "Egalité !!";
