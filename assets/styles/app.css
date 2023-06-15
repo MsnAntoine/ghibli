@@ -298,7 +298,6 @@ thead, tbody, #nC {
 
 
     @media (min-width: 1024px) and (max-width: 1440px) {
-        /* Ajoutez ici vos styles spécifiques pour les tablettes */
         .imagac{
             width: 100vh;
             position: fixed;
@@ -309,15 +308,11 @@ thead, tbody, #nC {
             width: 40vh;
             height: 55vh;
         }
-        .myButto{
-
-        }
 
     }
 
     /* Media Query pour les appareils de type tablette */
-    @media (min-width: 768px) and (max-width: 1024px) {
-        /* Ajoutez ici vos styles spécifiques pour les tablettes */
+    @media (min-width: 768px) and (max-width: 1023px) {
         .imagac{
             width: 90vh;
             position: fixed;
@@ -328,16 +323,51 @@ thead, tbody, #nC {
         p{
             width: 35vh;
             height: 55vh;
+            position: fixed;
+            right: 2vw;
+            bottom: 27vh;
         }
-        .myButto{
+        .btnac{
+            position: fixed;
+            top: 80vh;
+        }
 
-        }
 
     }
 
     /* Media Query pour les appareils de type téléphone portable */
     @media (max-width: 767px) {
-        /* Ajoutez ici vos styles spécifiques pour les téléphones portables */
+        .btnac{
+
+        }
+        .imagac{
+            width: 350px;
+            position: fixed;
+            top: 5vh;
+            right: 2vh;
+            z-index: -1;
+        }
+        p{
+            width: 50vh;
+            height: 40vh;
+            position: fixed;
+            bottom: 40vh;
+            right: 2vh;
+            font-weight: bolder;
+            text-shadow: 0.5px 0.5px 1px black;
+        }
+        .btnac{
+            position: fixed;
+            top: 55vh;
+            width: 150px;
+
+        }
+        button.myButto{
+            position: relative;
+            top: 42vw;
+            right: 32vh;
+            width: 350px;
+        }
 
 
     }
