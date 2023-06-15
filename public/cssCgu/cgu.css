@@ -1,6 +1,7 @@
 body {
     background: url('../medias/cguImg/howl033.jpg') no-repeat center center fixed;
     background-size: cover;
+
 }
 
 h1 {
@@ -11,17 +12,22 @@ h1 {
     text-align: center;
 }
 
-h2 {
+
+h2{
+    font-family: 'Yomogi', cursive;
     color: white;
     font-weight: bold;
 }
 
-p {
+
+p{
     color: black;
     font-weight: bolder;
 }
 
-.tabCgu {
+
+
+.tabCgu{
     position: relative;
     left: 25vw;
     text-align: center;
@@ -60,4 +66,5 @@ p {
     body{
         overflow-x: hidden;
     }
+
 }

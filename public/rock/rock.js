@@ -1,5 +1,5 @@
 const gameGrid = document.getElementById('game');
-const choices = ['rock', 'paper', 'scissors'];
+const choices = ['pierre', 'feuille', 'ciseaux'];
 let userChoice;
 let computerChoice;
 let score = 0;
@@ -46,21 +46,21 @@ for (let i = 0; i < choices.length; i++) {
 
 const getResult = () => {
     switch (userChoice + computerChoice) {
-        case 'scissorspaper':
-        case 'rockscissors':
-        case 'paperrock':
+        case 'ciseauxpapier':
+        case 'pierreciseaux':
+        case 'papierpierre':
             resultDisplay.innerHTML = 'Vous avez gagné!';
             incrementScore();
             successes++;
             break;
-        case 'paperscissors':
-        case 'scissorsrock':
-        case 'rockpaper':
+        case 'papierciseaux':
+        case 'ciseauxpierre':
+        case 'pierrepapier':
             resultDisplay.innerHTML = 'Perdu!';
             break;
-        case 'paperpaper':
-        case 'scissorsscissors':
-        case 'rockrock':
+        case 'papierpapier':
+        case 'ciseauxciseaux':
+        case 'pierrepierre':
             resultDisplay.innerHTML = "Egalité !!";
             break;
     }
