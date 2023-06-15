@@ -15,6 +15,7 @@
         {% endblock %}
     </head>
     <body>
+    {% if app.user %}
         <div class="menu">
             <nav>
                 <ul>
@@ -26,6 +27,7 @@
                 </ul>
             </nav>
         </div>
+    {% endif %}
         <div class="logoconnect">
             {% if app.user %}
                 <div class="mb-3">
