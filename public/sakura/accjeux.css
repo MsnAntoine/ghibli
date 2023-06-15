@@ -11,7 +11,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3waQ2TvFEom5cdDNl-bC-iy6smx9iMbUnkM5ue6nArJ1oo28jhLpcNN7x2JIo6k8v2yY&usqp=CAU");
+    background-size: cover;
+    background-image : url("https://images6.fanpop.com/image/photos/43600000/Spirited-Away-Wallpaper-studio-ghibli-43672965-1920-1080.jpg");
     gap: 30px;
 }
 .card-wrap{
@@ -64,7 +65,7 @@ body{
 .card-btn{
     border: none;
     border-radius: 100px;
-    background-color: #79ced2;
+    background-color: #525081;
     padding: 5px 30px;
     color: rgba(0, 0, 0, 0.52);
     margin-bottom: 30px;
