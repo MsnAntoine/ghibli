@@ -1,3 +1,3 @@
-# wattouat_card
+# ghiblistudio
 
 projet final 
