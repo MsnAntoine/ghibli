@@ -293,3 +293,51 @@ thead, tbody, #nC {
     border: solid 1px black;
     border-radius: 15px;
 }
+
+
+
+
+    @media (min-width: 1024px) and (max-width: 1440px) {
+        /* Ajoutez ici vos styles spécifiques pour les tablettes */
+        .imagac{
+            width: 100vh;
+            position: fixed;
+            right: 48vw;
+            z-index: -1;
+        }
+        p{
+            width: 40vh;
+            height: 55vh;
+        }
+        .myButto{
+
+        }
+
+    }
+
+    /* Media Query pour les appareils de type tablette */
+    @media (min-width: 768px) and (max-width: 1024px) {
+        /* Ajoutez ici vos styles spécifiques pour les tablettes */
+        .imagac{
+            width: 90vh;
+            position: fixed;
+            right: 30vw;
+            top: 15vh;
+            z-index: -1;
+        }
+        p{
+            width: 35vh;
+            height: 55vh;
+        }
+        .myButto{
+
+        }
+
+    }
+
+    /* Media Query pour les appareils de type téléphone portable */
+    @media (max-width: 767px) {
+        /* Ajoutez ici vos styles spécifiques pour les téléphones portables */
+
+
+    }
