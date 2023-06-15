@@ -25,7 +25,7 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
-
+    #[IsGranted("ROLE_USER")]
     #[Route('/jeux', name: 'app_dino')]
     public function dino(): Response
     {
@@ -33,7 +33,7 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
-  
+    #[IsGranted("ROLE_USER")]
   #[Route('/rock', name: 'app_rock')]
     public function rock(): Response
     {
@@ -41,7 +41,7 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
-  
+    #[IsGranted("ROLE_USER")]
      #[Route('/galerie', name: 'app_galerie')]
     public function galerie(): Response
     {
@@ -49,7 +49,7 @@ class HomeController extends AbstractController
            'controller_name' => 'HomeController',
         ]);
     }
-
+    #[IsGranted("ROLE_USER")]
     #[Route('/ghibli1', name: 'app_ghibli1')]
     public function ghibli1(): Response
     {
@@ -57,6 +57,7 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+    #[IsGranted("ROLE_USER")]
     #[Route('/ghibli2', name: 'app_ghibli2')]
     public function ghibli2(): Response
     {
@@ -64,6 +65,7 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+    #[IsGranted("ROLE_USER")]
     #[Route('/ghibli3', name: 'app_ghibli3')]
     public function ghibli3(): Response
     {
@@ -71,6 +73,7 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+    #[IsGranted("ROLE_USER")]
     #[Route('/ghibli4', name: 'app_ghibli4')]
     public function ghibli4(): Response
     {
@@ -78,6 +81,7 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+    #[IsGranted("ROLE_USER")]
     #[Route('/carte', name: 'app_carte')]
     public function carte(): Response
     {
@@ -85,6 +89,7 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+    #[IsGranted("ROLE_USER")]
     #[Route('/apropos', name: 'app_apropos')]
     public function apropos(): Response
     {
@@ -92,7 +97,7 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
-
+    #[IsGranted("ROLE_USER")]
     #[Route('/accjeux', name: 'app_accjeux')]
     public function accjeux(): Response
     {
@@ -100,7 +105,7 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
-
+    #[IsGranted("ROLE_USER")]
     #[Route('/flappyTotoro', name: 'app_flappyTotoro')]
     public function flappyTotoro(): Response
     {
@@ -108,6 +113,7 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
     #[Route('/cgu', name: 'app_cgu')]
     public function cgu(): Response
     {
@@ -115,4 +121,5 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
 }
